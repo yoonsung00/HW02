@@ -37,24 +37,18 @@ public:
 
 int main() {
     // Animal 타입 포인터로 다양한 객체를 가리킴
-    Animal* myAnimal[3] = {};
+    Dog myDog;
+    Cow myCow;
 
-    myAnimal[0] = new Dog;
-    myAnimal[1] = new Cat;
-    myAnimal[2] = new Cow;
-    
+    //myAnimal[0] = &myDog;
+    //myAnimal[1] = &myCat;
+    //myAnimal[2] = &myCow;
+
+    Animal* myAnimal[3] = { &myDog, &myCat, &myCow };
+
     for (int i = 0; i < size(myAnimal); i++) {
         // 동물 사운드 override 출력
         myAnimal[i]->makeSound();
-
-        // 할당된 메모리 제거
-        delete myAnimal[i];
-
-        myAnimal[i] = nullptr;
-
-        if (myAnimal[i] == nullptr) {
-            cout << "Memory Deleted." << endl;
-        }
     }
 
     return 0;
