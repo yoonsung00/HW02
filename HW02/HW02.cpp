@@ -38,6 +38,7 @@ public:
 int main() {
     // Animal 타입 포인터로 다양한 객체를 가리킴
     Dog myDog;
+    Cat myCat;
     Cow myCow;
 
     //myAnimal[0] = &myDog;
